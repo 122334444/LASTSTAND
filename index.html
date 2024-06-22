@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Stand Game</title>
+    <style>
+        body {
+            text-align: center;
+            background-image: url("body.png");
+            background-size: cover;
+        }
+        #frontPage {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        #gameCanvas {
+            border: 2px solid black;
+            display: none;
+            margin: 0 auto;
+            background-image: url("1.png");
+            background-size: cover;
+        }
+        .controls {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .controls button {
+            font-size: 24px;
+            margin: 5px;
+            padding: 10px;
+        }
+        #startButton{
+            height: 30px;
+            width: 100px;
+            background-color: rgb(57, 255, 57);
+        }#frontPage{
+            height: 600px;
+            width: 900px;
+            /* border: 2px solid black; */
+            margin: auto;
+            margin-top: 50px;
+           background-image: url("front.png");
+           background-size: cover;
+            font-style:italic;
+        }
+       
+
+
+    </style>
+</head>
+<body>
+    <div id="frontPage">
+        <h1>Last Stand Game</h1>
+        <button id="startButton">Play</button>
+        <p>*  When the game starts, zombies will come from both directions trying to get to you. They can break through barriers to get closer. You can move around and shoot at the zombies to stop them from reaching you. If the zombies get to you and you run out of health, the game is over.</p>
+        <h2>How to Play</h2>
+        <ul>
+            <li>Use the ⬅️ and ➡️ buttons to move survivor left and right.</li>
+            <li>Use the ⬆️ button to jump (Press Spacebar in laptop).</li>
+            <li>Use the 🔄 button to rotate the gun (Press ⬆️ in laptop).</li>
+            <li>Use the 🔥 button to fire the gun (Press F in laoptop).</li>
+        </ul>
+        
+    </div>
+    <canvas id="gameCanvas" width="900" height="600"></canvas>
+    <div class="controls" style="display: none;">
+        <button id="leftShiftButton">⬅️</button>
+        <button id="jumpButton">⬆️</button>
+        <button id="rightShiftButton">➡️</button>
+        <button id="rotateGunButton">🔄</button>
+        <button id="fireGunButton">🔥</button>
+        <button id="playButton" style="display: none;">▶️</button>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
